@@ -17,7 +17,7 @@ find_package(Ogg CONFIG REQUIRED)
 find_package(Vorbis REQUIRED)
 find_package(OpenGL REQUIRED)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets OpenGLWidgets)
 qt_standard_project_setup()
 
 add_subdirectory(src/Qt)
