@@ -8,6 +8,7 @@
     "libmad",
     "libogg",
     "libvorbis",
-    "opengl"
+    "opengl",
+    "qtbase"
   ]
 }
