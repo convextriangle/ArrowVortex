@@ -20,6 +20,7 @@ find_package(OpenGL REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 qt_standard_project_setup()
 
+add_subdirectory(src/Qt)
 add_subdirectory(src/Core)
 add_subdirectory(src/Dialogs)
 add_subdirectory(src/Editor)
@@ -27,9 +28,13 @@ add_subdirectory(src/Managers)
 add_subdirectory(src/Simfile)
 add_subdirectory(src/System)
 
+set_target_properties(ArrowVortex PROPERTIES
+    AUTOMOC ON
+    AUTOUIC ON
+    AUTORCC ON
+)
+
 install(TARGETS ArrowVortex RUNTIME)
 install(DIRECTORY bin/assets DESTINATION bin)
 install(DIRECTORY bin/noteskins DESTINATION bin)
 install(DIRECTORY bin/settings DESTINATION bin)
-
-target_link_libraries(ArrowVortex PRIVATE Qt6::Widgets)
