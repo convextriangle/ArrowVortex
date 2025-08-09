@@ -17,6 +17,9 @@ find_package(Ogg CONFIG REQUIRED)
 find_package(Vorbis REQUIRED)
 find_package(OpenGL REQUIRED)
 
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+qt_standard_project_setup()
+
 add_subdirectory(src/Core)
 add_subdirectory(src/Dialogs)
 add_subdirectory(src/Editor)
@@ -28,3 +31,5 @@ install(TARGETS ArrowVortex RUNTIME)
 install(DIRECTORY bin/assets DESTINATION bin)
 install(DIRECTORY bin/noteskins DESTINATION bin)
 install(DIRECTORY bin/settings DESTINATION bin)
+
+target_link_libraries(ArrowVortex PRIVATE Qt6::Widgets)

@@ -6,7 +6,9 @@ Prerequsites:
 * Installation of Visual Studio Build Tools
 * CMake (available with VS Build Tools)
 * vcpkg (available with VS Build Tools)
+* Qt 6.9.1 (to test this prototype)
 * `VCPKG_ROOT` environment variable pointing at vcpkg installation folder
+* `Qt6_DIR` environment variable pointing at `{Qt installation dir}/6.9.1/{compiler name}/lib/cmake`
 
 ### With CMake CLI
 With Developer PowerShell open at root folder of this project run:
