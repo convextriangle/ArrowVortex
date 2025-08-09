@@ -7,7 +7,14 @@ qt_add_executable(ArrowVortex
 
 target_link_libraries(ArrowVortex PRIVATE Qt6::Widgets Qt6::OpenGLWidgets)
 
-set_target_properties(ArrowVortex PROPERTIES
-    WIN32_EXECUTABLE ON
-    MACOSX_BUNDLE ON
-)
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    set_target_properties(ArrowVortex PROPERTIES
+        WIN32_EXECUTABLE OFF
+        MACOSX_BUNDLE OFF
+    )
+else()
+    set_target_properties(ArrowVortex PROPERTIES
+        WIN32_EXECUTABLE ON
+        MACOSX_BUNDLE ON
+    )
+endif()
