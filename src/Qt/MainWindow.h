@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QOpenGLWidget>
+#include <QVBoxLayout>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -19,7 +22,9 @@ public:
     ~MainWindow() override;
 
 private:
-    Ui::MainWindow *ui;
+    QWidget centralWidget;
+    QVBoxLayout layout;
+    QOpenGLWidget graphicsWidget;
 };
 
 #endif // MAINWINDOW_H
